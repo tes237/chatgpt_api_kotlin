@@ -40,6 +40,11 @@ class MainActivity : AppCompatActivity()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        //Do the following code only once, and remove these
+        //pref.openAIkey = "YOUR KEY1"
+        //pref.openPrjkey = "YOUR KEY2"
+        //pref.openOrgkey = "YOUR KEY3"
+
         vm.reqChatmessage("user", "안녕하세요")
 
         vm.messageLiveData.observe(this) { data ->
